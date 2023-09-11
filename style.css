@@ -8,8 +8,7 @@
 }
 
 img {
-    width: 100%;
-    height: auto;
+    display: block;
 }
 
 ul {
@@ -52,7 +51,39 @@ nav {
 }
 
 .navbar {
+    position: fixed;
+    top: -50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    transition: all 400ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+li a:hover {
+    color: #E9AA52;
+}
+
+#toggle:checked ~ .navbar {
+    top: 0;
+    background-color: #FFFDFA;
+    padding: 10px 50px;
+    text-align: center;
+    width: 100vw;
+    color: #5E607A;
+    line-height: 26px;
+    border-bottom: 1px solid #00001A;
+}
+
+#toggle {
     display: none;
+}
+
+label {
+    position: relative;
+    z-index: 99;
+    cursor: pointer;
 }
 
 .burger {
@@ -112,6 +143,11 @@ main .container .grid {
     line-height: 24px;
     font-weight: 700;
     letter-spacing: 4.375px;
+}
+
+.c a:hover {
+    background-color: #E9AA52;
+    color: #00001A;
 }
 
 .aside {
@@ -221,6 +257,8 @@ section .container .grid {
 
     .navbar {
         display: initial;
+        position: static;
+        background-color: #FFFDFA;
     }
 
     .navbar ul {
@@ -240,17 +278,18 @@ section .container .grid {
     main .container {
         grid-template-columns: 2fr 1fr;
         gap: 30px;
+        align-items: flex-start;
     }
     
     main .container .grid {
-        grid-template-rows: 2fr 1fr;
+        grid-template-rows: 1.75fr 1fr;
         grid-template-columns: 1fr 1fr;
-        align-items: center;
         gap: 30px;
     }
     
     .a {
         grid-column: span 2;
+        height: 100%;
     }
     
     .b h1 {
@@ -267,6 +306,7 @@ section .container .grid {
     
     .aside {
         padding: 32px 24px;
+        margin: 0;
     }
     
     .aside h2 {

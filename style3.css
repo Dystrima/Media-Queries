@@ -103,6 +103,32 @@ main {
     margin-top: 30px;
 }
 
+.kuro {
+    display: flex;
+    flex-direction: column;
+    max-width: 1110px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.kuro h2 {
+    color: #5E607A;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.kuro span {
+    color: #E9AA52;
+}
+
+.kuro img {
+    width: 350px;
+    border: 2px double #5E607A;
+    border-radius: 2rem;
+}
+
 .container-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -178,19 +204,31 @@ main {
     .container-grid {
         grid-template-columns: repeat(3, 1fr);
     }
+    .kuro img {
+        width: 500px;
+    }
 }
 @media (min-width: 1280px) {
     .container-grid {
         grid-template-columns: repeat(6, 1fr);
+    }
+    .kuro img {
+        width: 50%;
     }
 }
 @media (min-width: 1440px) {
     .container-grid {
         grid-template-columns: repeat(6, 1fr);
     }
+    .kuro img {
+        width: 50%;
+    }
 }
 @media (min-width: 1920px) {
     .container-grid {
         grid-template-columns: repeat(6, 1fr);
+    }
+    .kuro img {
+        width: 50%;
     }
 }
